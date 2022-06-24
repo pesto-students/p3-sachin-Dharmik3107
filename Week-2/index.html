@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Trial</title>
+    <link rel="stylesheet" href="/first.css" media="(min-width: 1880px)">
+    <link rel="stylesheet" href="/second.css" media="(min-width: 940px) and (max-width:1879px)">
+    <link rel="stylesheet" href="/third.css" media="(min-width:727px) and (max-width: 939px)">
+    <link rel="stylesheet" href="/forth.css" media="(max-width: 726px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Oswald:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="titleblock">
+        <h1 class="heading">
+            Kia Creative3D
+        </h1>
+        <h4 class="desc">
+            We provide expert solution on 3D Modelling and Analysis.
+        </h4>
+        <nav class="navbar">
+            <ul class="navbtn">
+                <li class="nbtn1 btn"><a href="#">Home</a></li>
+                <li class="nbtn1 btn"><a href="#">Services</a></li>
+                <li class="nbtn1 btn"><a href="#">About us</a></li>
+                <li class="nbtn1 btn"><a href="#">Contat us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <blockquote class="quote">
+        Let's Explore the 3D World...
+    </blockquote>
+    <main>
+        <article class="services">
+            <ul class="lists">
+                <li class="serv">
+                    <h4>3D Modelling</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum libero quo corporis corrupti
+                        commodi aperiam, laudantium repudiandae nemo veritatis, provident dolore rem voluptatem! Quo
+                        cumque cum rerum dolorem ullam aspernatur, fuga aliquam.<a href="#">Learn More</a></p>
+                        
+                </li>
+                <li class="serv">
+                    <h4>3D Rendering</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem at in molestias quas
+                        consectetur incidunt, suscipit perspiciatis totam, rem iste vero, aperiam fuga quidem ipsa a
+                        error! Quas quod atque sequi. Voluptate!<a href="#">Learn More</a></p>
+                        
+                </li>
+                <li class="serv">
+                    <h4>2D Drafting</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti quidem aperiam cupiditate
+                        dolorum reiciendis, quo alias repudiandae illo voluptate autem aut, tempore atque recusandae
+                        sapiente minima cumque nemo officiis voluptatem hic culpa?<a href="#">Learn More</a></p>
+                        
+                </li>
+                <li class="serv">
+                    <h4>Design Analysis</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas reprehenderit laudantium iusto.
+                        Nemo quae, eum aperiam incidunt nisi eaque itaque consequuntur, est atque asperiores voluptate
+                        officia? Quibusdam voluptatum neque voluptates tempora aliquam?<a href="#">Learn More</a></p>
+                        
+                </li>
+            </ul>
+        </article>
+        <div class="formdiv">
+            <h4 class="form-heading">Tell us your Problem</h4>
+            <form action="#" class="form-flex">
+                <!-- <div class="fullname"> -->
+                <label for="name">Enter Your Full Name<span>*</span></label>
+                <input type="text" name="name" id="name" placeholder="ex. Dwayne klaus" required>
+                <!-- </div> -->
+                <!-- <div class="email"> -->
+                <label for="email-id">Enter your email id<span>*</span></label>
+                <input type="email" name="email-id" id="email-id" placeholder="ex. abc@xyz.com" required pattern="[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                <!-- </div> -->
+                <label for="Service">Enter the Service you need<span>*</span></label>
+                <select name="serivev" id="Service" required>
+                    <option value="">--Please choose an Option--</option>
+                    <option value="3d-modelling">3D Modelling</option>
+                    <option value="3d-rendering">3D Rendering</option>
+                    <option value="2d-drafting">2D Drafting</option>
+                    <option value="design-analysis">Design Analysis</option>
+                </select>
+                <label for="software" class="software">Select Software Interface<span>*</span></label>
+                <div class="softwares">
+                    <input type="radio" name="software" id="software" value="Solidworks"  required>Solidworks
+                    <input type="radio" name="software" id="software" value="Solidworks">Autocad
+                    <input type="radio" name="software" id="software" value="Solidworks">Catia
+                </div>
+                <label for="query">Enter Your Problem<span>*</span></label>
+                <textarea name="query" id="query" cols="30" rows="3" placeholder="Enter your problem here" required></textarea>
+                <button>Send it</button>
+            </form>
+        </div>
+    </main>
+    <footer class="contact">
+        <div class="contacts">
+            <p>PH NO: +91987654321</p>
+            <p>Address: Amroli, Surat, Gujarat-394107</p>
+        </div>
+        <div class="feedback">
+            <form action="#">
+                <label for="feedback">
+                    Rate our Services
+                </label>
+                <input type="range" name="feedback" id="feedback" min="1" step="1" max="5">
+            </form>
+        </div>
+    </footer>
+</body>
+
+</html>
