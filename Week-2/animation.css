@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.text{
+    display: inline-block;
+    position: absolute;
+    top: 450px;
+    left: 450px;
+    /* border: 2px solid blue; */
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 75px;
+    z-index: -1;
+}
+.red{
+    display: inline-block;
+    position: absolute;
+    top: 450px;
+    left: 450px;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    transform-origin: top left ;
+    transform: rotate(0deg);
+    transition: transform 1s ;
+}
+.yellow{
+    display: inline-block;
+    position: absolute;
+    top: 450px;
+    left: 550px;
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    transform-origin: top right ;
+    transform: rotate(0deg);
+    transition: transform 1s ;
+}
+.blue{
+    display: inline-block;
+    position: absolute;
+    top: 550px;
+    left: 450px;
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    transform-origin: bottom left ;
+    transform: rotate(0deg);
+    transition: transform 1s ;
+}
+.green{
+    display: inline-block;
+    position: absolute;
+    top: 550px;
+    left: 550px;
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    transform-origin: bottom right ;
+    transform: rotate(0deg);
+    transition: transform 1s ;
+}
+main:hover .red{
+    transform-origin: top left;
+    transform: rotate(90deg);
+    transition: transform 1s ;
+}
+main:hover .green{
+    transform-origin: bottom right;
+    transform: rotate(90deg);
+    transition: transform 1s ;
+}
+main:hover .yellow{
+    transform-origin: top right;
+    transform: rotate(-90deg);
+    transition: transform 1s ;
+}
+main:hover .blue{
+    transform-origin: bottom left;
+    transform: rotate(-90deg);
+    transition: transform 1s ;
+}

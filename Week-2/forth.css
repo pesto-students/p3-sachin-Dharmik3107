@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+body {
+    background-color: white;
+}
+
+.titleblock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.titleblock::before {
+    content: '';
+    background: url('/omer-haktan-bulut-v1q0VofqZcA-unsplash.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 300px;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.heading,
+.desc {
+    color: black;
+}
+
+.navbar {
+    margin-top: 10px;
+}
+
+.navbtn {
+    display: flex;
+    width: 70vw;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    margin: 5px;
+    list-style: none;
+    background-color: lightgray;
+    padding: 1px 8px;
+    border-radius: 10px;
+}
+
+.btn a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: gray;
+}
+
+.btn a:hover {
+    color: white;
+}
+
+.quote {
+    display: block;
+    position: absolute;
+    top: 15vh;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+    margin-top: 50px;
+}
+
+main {
+    position: absolute;
+    top: 50vh;
+    /* width: 100%; */
+}
+
+.services ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100vw;
+    justify-content: center;
+}
+
+.serv {
+    /* border: 2px solid blue; */
+    margin: 25px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: rgb(235, 234, 234);
+    color: black;
+    box-shadow: 2px 2px 10px black;
+}
+
+.serv h4 {
+    width: 80vw;
+    text-align: center;
+}
+
+.serv p {
+    width: 80vw;
+    text-align: justify;
+}
+.serv p a{
+    text-decoration: none;
+    font-weight:600;
+}
+.serv p a:hover{
+    text-decoration: none;
+    font-weight:600;
+    color: black;
+}
+.formdiv {
+    display: flex;
+    /* content: ''; */
+    /* background-color: rgba(128, 128, 128,0.4); */
+    position: absolute;
+    /* top: 0px;
+    left: 0px; */
+    width: 100vw;
+    height: 350px;
+    justify-content: space-around;
+}
+
+.formdiv::before {
+    content: '';
+    background-color: rgba(128, 128, 128, 0.4);
+    position: absolute;
+    top: -5px;
+    left: 0px;
+    width: 100vw;
+    height: 360px;
+    z-index: -1;
+}
+
+.form-heading {
+    /* border: 2px solid rebeccapurple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    border-right: 1px solid black;
+    height: 350px;
+    width: 50%;
+}
+
+.form-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    justify-content: start;
+}
+
+.form-flex label {
+    margin-top: 10px;
+    color: black;
+    text-align: start;
+    width: 300px;
+    /* border: 2px solid red; */
+}
+
+.form-flex input {
+    height: 30px;
+    text-align: center;
+    width: 45vw;
+}
+
+.form-flex select,
+.form-flex textarea {
+    width: 45vw;
+}
+
+.softwares {
+    display: flex;
+    height: 25px;
+    width: 45vw;
+}
+
+.softwares input {
+    height: 20px;
+}
+span{
+    color: red;
+}
+button {
+    margin-top: 10px;
+    width: 150px;
+    height: 40px;
+    font-weight: 600;
+    font-size: 18px;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 3px;
+    border-radius: 15px;
+    /* border: 2px solid red; */
+}
+button:hover{
+    transition: 0.6s;
+    background-color: rgba(0,0,0,0.5);
+    color: black;
+}
+.contact {
+    display: flex;
+    position:absolute;
+    top: 91.5rem;
+    width: 100%;
+    height: 5rem;
+    /* bottom: 0px; */
+    /* margin-top: 90px; */
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    align-items: center;
+    background-color: grey;
+}
+
+.contacts {
+    padding: 10px;
+    /* border: 2px solid blue; */
+}
+
+.feedback {
+    /* border: 2px solid blue; */
+    text-align: center;
+    height: 30px;
+    padding-top: 7px;
+}
