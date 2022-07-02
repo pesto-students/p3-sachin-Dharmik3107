@@ -24,10 +24,10 @@ obj2();
 
 
 console.log('Code for Call')
-a = 10;
-b = 20;
-c = 5;
-d = 25;
+let a = 10;
+let b = 20;
+let c = 5;
+let d = 25;
 
 function multiAdd(){
     return (this.a + this.b)*(this.c + this.d)
