@@ -9,14 +9,14 @@ console.log(storedNumber);
 const Number = new Promise(function (resolve, reject) {
   setTimeout(() => {
     if (dividedNumber != 0) resolve(storedNumber);
-     else reject(Error);
+     else reject(error);
   }, 1000);
 });
 Number.then(
   function (storedNumber) {
     console.log("It is Resolved");
   },
-  function (Error) {
+  function (error) {
     console.log("It is Rejected");
   }
 );
