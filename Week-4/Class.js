@@ -1,6 +1,6 @@
 //! ES6 Based Inheritance using Class
 
-class person {
+class Person {
     constructor(name) {
         this.name = name;
     }
@@ -8,15 +8,15 @@ class person {
         console.log(this.name)
     }
 }
-class Teacher extends person{
+class Teacher extends Person{
     constructor(name,subject){
         super(name)
         this.subject = subject
     }
     teach(){
-        return console.log(this.name + ' is now teaching ' +this.subject)
+        return this.name + ' is now teaching ' +this.subject
     }
 }
 const teacher = new Teacher('Dharmik','Maths');
-teacher.teach();
+console.log(teacher.teach());
 teacher.printName();
