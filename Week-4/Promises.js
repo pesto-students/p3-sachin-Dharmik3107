@@ -6,16 +6,13 @@ let dividedNumber = storedNumber % 5;
 // console.log(getNumber())
 console.log(storedNumber);
 // console.log(dividedNumber)
-let checkNumber = new Promise(function (resolve, reject) {
+const Number = new Promise(function (resolve, reject) {
   setTimeout(() => {
-    if (dividedNumber != 0) {
-      resolve(storedNumber);
-    } else {
-      reject(Error);
-    }
+    if (dividedNumber != 0) resolve(storedNumber);
+     else reject(Error);
   }, 1000);
 });
-checkNumber.then(
+Number.then(
   function (storedNumber) {
     console.log("It is Resolved");
   },
