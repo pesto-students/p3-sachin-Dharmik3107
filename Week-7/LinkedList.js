@@ -6,7 +6,7 @@ class Node {
   }
 }
 //class for singleLinkedList
-class singleLinkedList {
+class SingleLinkedList {
   constructor() {
     this.head = null;
     this.tail = null;
@@ -207,4 +207,4 @@ class singleLinkedList {
   }
 }
 
-module.exports = (singleLinkedList)
+module.exports = (SingleLinkedList)

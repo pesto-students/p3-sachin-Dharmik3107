@@ -1,4 +1,4 @@
-class customStack{
+class CustomStack{
     constructor(){
         //variable declaration
         this.items = [];
@@ -36,4 +36,4 @@ class customStack{
     }
 }
 
-module.exports = (customStack);
+module.exports = (CustomStack);
