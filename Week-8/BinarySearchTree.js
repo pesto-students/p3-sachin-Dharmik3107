@@ -5,7 +5,7 @@ class Node {
     this.right = null;
   }
 }
-export default class BinarySearchTree {
+class BinarySearchTree {
   constructor() {
     this.root = null;
   }
@@ -60,3 +60,4 @@ export default class BinarySearchTree {
   }
 }
 
+module.exports = BinarySearchTree;
