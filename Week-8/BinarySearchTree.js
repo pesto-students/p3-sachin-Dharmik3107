@@ -43,20 +43,18 @@ class BinarySearchTree {
   }
   find(value) {
     if (this.isEmpty) return false;
-    else {
-      let current = this.root;
-      let found = false;
-      while (current && !found) {
-        if (value < current.left) {
-          current = current.left;
-        } else if (value > current.right) {
-          current = current.right;
-        } else {
-          this.found = true;
-        }
+    let current = this.root;
+    let found = false;
+    while (current && !found) {
+      if (value < current.value) {
+        current = current.left;
+      } else if (value > current.value) {
+        current = current.right;
+      } else {
+        found = true;
       }
-      return found;
     }
+    return found;
   }
 }
 
