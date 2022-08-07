@@ -1,7 +1,7 @@
-//undirected Graph Constructor
-class MyGraph {
+//directed Graph constructor
+class directedGraph {
     constructor(){
-        this.list = {};
+        this.list = [];
     }
     addVertex(vertex){
         if(this.list[vertex]) return 'Vertex is already exist';
@@ -11,13 +11,11 @@ class MyGraph {
         if(!this.list[firstVertex]) return `${firstVertex} not found`;
         if(!this.list[secondVertex]) return `${secondVertex} not found`;
         this.list[firstVertex].add(secondVertex);
-        this.list[secondVertex].add(firstVertex);
     }
     removeEdge(){
         if(!this.list[firstVertex]) return `${firstVertex} not found`;
         if(!this.list[secondVertex]) return `${secondVertex} not found`;
         this.list[firstVertex].delete(secondVertex);
-        this.list[secondVertex].delete(firstVertex);
     }
     removeVertex(vertex){
         if(!this.list[vertex]) return "Vertex doesn't exist";
@@ -29,10 +27,11 @@ class MyGraph {
     }
     get log(){
         let getList = this.list;
-        for(let element in getList) console.log(element,[...getList[element]])
-        return getList;
+        for(let element in getList) console.log(element,[...getList[element]]);
     }
-
+    get length(){
+        return Object.keys(this.list).length;
+    }
     
 }
-module.exports = MyGraph;
+module.exports = directedGraph;
