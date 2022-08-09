@@ -1,14 +1,18 @@
-//Find the Depth of Tree
-/*
-@input {Tree}
-@output {Number(depth)}
+/** 
+*TODO:Find the Depth of Tree
+*@input {Tree}
+*@output {Number(depth)}
 */
+//calling class from source
 const BinarySearchTree = require("./BinarySearchTree");
-
+//depth function created
 const findTreeDepth = (tree) => {
+  //necessary input checking condition
   if (tree.root == null) throw "Empty Tree";
+  //if tree has only one element
   if (!tree.root.left && !tree.root.right) return 0;
   else {
+    //making two counter to travel to last element
     let leftCounter = 0;
     let rightCounter = 0;
     while(true){
@@ -24,8 +28,10 @@ const findTreeDepth = (tree) => {
         console.log(current.right,'right')
         rightCounter++;
       }
+      //both are at last element then break the loop
       if(current.left == null && current.right == null) break;
     }
+    //finding max depth and returning it
     let depth = Math.max(leftCounter,rightCounter);
     return depth;
   }
