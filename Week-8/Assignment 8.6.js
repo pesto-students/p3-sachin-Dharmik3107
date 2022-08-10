@@ -1,8 +1,15 @@
+/** 
+*TODO:to get all path
+*@input {Tree}
+*@output {string}
+*/
+//calling class from source
 const directedGraph = require("./directedGraph");
-
+//function to get path from graph
 const getAllPath = (graph, end) => {
   const result = [];
   const path = [];
+  //function to check nodes and neighbours
   search = (target) => {
     path.push(target);
     if (target === end) result.push([...path]);

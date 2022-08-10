@@ -1,6 +1,11 @@
-//find the town judge
+/** 
+*TODO:find the town judge
+*@input {Tree}
+*@output {string}
+*/
+//calling class from source
 const directedGraph = require("./directedGraph");
-
+//function to convert object to array 
 const arrayConverter = list => {
     result = [];
     subarray = [];
@@ -17,6 +22,7 @@ const arrayConverter = list => {
     }
     return result;
 }
+//function to find town judge
 const findJudge = (trust,n) =>{
     const newArray = new Array(n+1).fill(0);
     for (let [i,j] of trust) {
