@@ -1,28 +1,26 @@
-import React from "react";
+import React, {useState} from 'react'
 
-function AddTask() {
+function AddTask(props) {
+
+  const handleChange = e => {
+    setInput(e.target.value)
+  }
+  const handleAddTask = e => {
+    e.preventDefault();
+    props.onSubmit({
+      id : Math.floor(Math.random()*10000),
+      text : input
+    })
+    setInput('');
+  }
+
+  const [input,setInput] = useState('')
   return (
-    <div className="task-card">
-      <h4 className="card-heading">Add Task</h4>
-      <form action="/" className="add-task">
-        <input
-          type="text"
-          name="task-title"
-          id="task-title"
-          placeholder="Add Task Title"
-        />
-        <textarea
-          name="task-desc"
-          id="task-desc"
-          cols="30"
-          rows="5"
-          placeholder="Add Description of task"
-          maxLength={90}
-        ></textarea>
-      </form>
-      <button className="btn btn-theme">Add Note</button>
-    </div>
-  );
+    <form className='todo-form' onSubmit={handleAddTask}>
+      <input type="text" placeholder='Add a Task' value={input} name="text" className='todo-input' onChange={handleChange}/>
+      <button className='todo-button' onClick={handleAddTask}>Add Task</button>
+    </form>
+  )
 }
 
-export default AddTask;
+export default AddTask
