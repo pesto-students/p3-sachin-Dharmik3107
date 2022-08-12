@@ -4,7 +4,7 @@ import TaskList from "./Components/TaskList";
 
 function App() {
   return (
-  <div className="todo-App">
+  <div className="todo-app">
     <TaskList/>
   </div>
   );
