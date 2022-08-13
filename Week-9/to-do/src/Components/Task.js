@@ -19,10 +19,12 @@ function Task(props) {
             value : ""
         });
     }
+    
     //if edit id found then calling AddTask component and provided corresponding props
     if(edit.id){
         return <AddTask edit = {edit} onSubmit={submitUpdate}/>
     }
+
     //render function
     //! there will be two type of task 1.not completed or completed so it is identified using map function
   return props.tasks.map((task,index) =>(
