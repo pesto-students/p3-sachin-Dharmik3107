@@ -4,13 +4,13 @@ import Task from './Task';
 
 //! Parent function of all component and child App...
 function TaskList() {
-  const [tasks, setTasks] = useState(initTask)
   //Storing Task as element of array in local storage
   let initTask;
   if(localStorage.getItem('tasks')=== null) initTask=[];
   else initTask = JSON.parse(localStorage.getItem('tasks'));
-
+  
   //Receiving the string stored in local storage using useEffect Hook
+  const [tasks, setTasks] = useState(initTask)
   useEffect(()=>{
     localStorage.setItem('tasks',JSON.stringify(tasks));
   },[tasks])
