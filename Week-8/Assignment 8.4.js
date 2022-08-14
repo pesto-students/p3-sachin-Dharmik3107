@@ -1,6 +1,13 @@
+/** 
+*TODO:check for path(check for each vertex connected to other two vertex)
+*@input {Tree}
+*@output {Boolean}
+*/
+//calling class from source
 const MyGraph = require("./customGraph");
-
+//function to check path between vertexes
 const checkPath = (graph) => {
+    //checking for size of element's list of connected vertex
     for(let element in graph){
         if(graph[element].size<2) return false;
     }

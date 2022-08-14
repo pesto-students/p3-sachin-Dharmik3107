@@ -1,12 +1,21 @@
+/** 
+*TODO:Level Order Traversal
+*@input {Tree}
+*@output {list}
+*/
+//calling class from source
 const MyQueue = require('./customQueue')
 const BinarySearchTree = require('./BinarySearchTree')
-
+//levelorder function created
 const levelOrder = (tree) =>{
+    //resultant list
     let result = [];
+    //using queue to arrange removed element using dequeue to arrange it from beginning 
     let queue = new MyQueue();
-
+    //pointer
     let current = tree.root;
     queue.enqueue(current);
+    //loop to remove element from start of queue and add it to result
     while(queue.size){
         current = queue.dequeue();
         result.push(current.value);
