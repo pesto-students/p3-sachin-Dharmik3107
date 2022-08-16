@@ -1,0 +1,211 @@
+/*! imports */
+/*? font-family: 'Playfair Display', serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+/** variables */
+:root{
+  --background-color: #141B41;
+  --white-font-color: #FFF;
+  --white-btn-hover:rgb(203, 199, 199);
+  --content-font-color: #306BAC;
+  --content-div-color: #6F9CEB;
+  --button-bg-color: #918EF4;
+}
+/* Universal Properties */
+*{
+  box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s;
+}
+
+/* Desinging Header Component */
+.header{
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 99.1vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color);
+}
+.navbar{
+  display: flex;
+  width: 99.1vw;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: var(--white-font-color);
+  word-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
+}
+.page-title,.login-btns{
+  height: 5vh;
+}
+.login-btns>a{
+  text-decoration: none;
+  color: var(--white-font-color); 
+}
+.nav-btns{
+  height: 5vh;
+}
+.btn-container{
+  display: flex;
+  width: 20vw;
+  height: 5vh;
+  justify-content: space-evenly;
+}
+.btn-container li{
+  list-style: none;
+}
+.btn-hover:hover{
+  cursor: pointer;
+  color: var(--white-btn-hover)
+}
+.page-descriptor{
+  display: flex;
+  justify-content: space-between;
+  width: 99.1vw;
+}
+.information{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin: 4rem;
+  width: 40vw;
+}
+.information>h1{
+  font-size: 3rem;
+  color: var(--white-font-color);
+  word-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
+}
+.information>p{
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+  color: var(--white-btn-hover);
+}
+.page-descriptor>img{
+  margin-right: 10rem;
+}
+.inputForm{
+  position: absolute;
+  top: 80vh;
+  left: 20vw;
+  width: 60vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  background-color: var(--background-color);
+}
+.inputForm>input{
+  height: 4vh;
+  width: 45vw;
+  border: none;
+  outline: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.inputForm>input::placeholder{
+  font-size: 1rem;
+  text-indent: 3rem;
+  color: var(--content-font-color);
+}
+.inputForm>button{
+  height: 4vh;
+  width: 10vw;
+  border: none;
+  outline: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: var(--button-bg-color);
+  color:var(--white-font-color);
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+.inputForm>button:hover{
+  height: 4vh;
+  width: 10vw;
+  border: none;
+  outline: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color:rgba(145, 142, 244,0.9);
+  color:var(--white-font-color);
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+.content-container-1{
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  transform: rotateZ(45deg);
+  top: 60vh;
+  left: 10vw;
+  background-color: var(--button-bg-color);
+  z-index: -1;
+  border-radius: 50%;
+}
+.content-container-2{
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  transform: rotateZ(45deg);
+  top: 75vh;
+  left: 30vw;
+  background-color: var(--button-bg-color);
+  z-index: -1;
+  border-radius: 10px;
+}
+.content-container-3{
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  transform: rotateZ(45deg);
+  top: 60vh;
+  left: 50vw;
+  background-color: var(--button-bg-color);
+  z-index: -1;
+  border-radius: 10px;
+}
+.content-container-4{
+  position: absolute;
+  width: 12rem;
+  height: 12rem;
+  transform: rotateZ(45deg);
+  top: 70vh;
+  left: 75vw;
+  background-color: var(--button-bg-color);
+  z-index: -1;
+  border-radius: 10px;
+}
+.content-container-5{
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  transform: rotateZ(45deg);
+  top: 85vh;
+  left: 55vw;
+  background-color: var(--button-bg-color);
+  z-index: -1;
+  border-radius: 50%;
+}
+.content-container-6{
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  transform: rotateZ(45deg);
+  top: 85vh;
+  left: 5vw;
+  background-color: var(--button-bg-color);
+  z-index: -1;
+  border-radius: 50%;
+}
+
