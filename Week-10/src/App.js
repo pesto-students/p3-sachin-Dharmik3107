@@ -2,6 +2,7 @@ import './App.css';
 import ContentBG from './Components/ContentBG';
 import Header from './Components/Header';
 import InputForm from './Components/InputForm';
+import ResultLink from './Components/ResultLink';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Header/>
       <InputForm/>
       <ContentBG/>
+      <ResultLink/>
     </>
   );
 }

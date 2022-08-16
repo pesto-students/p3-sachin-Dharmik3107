@@ -93,7 +93,7 @@
 }
 .inputForm{
   position: absolute;
-  top: 80vh;
+  top: 75vh;
   left: 20vw;
   width: 60vw;
   height: 10vh;
@@ -207,5 +207,57 @@
   background-color: var(--button-bg-color);
   z-index: -1;
   border-radius: 50%;
+}
+/* Styling ResultLink Component */
+.shorted-container{
+  position: absolute;
+  border: 1px solid red;
+  top: 90vh;
+  left: 20vw;
+  width: 60vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  border-radius: 1rem;
+}
+.shorted-link{
+  width: 50vw;
+  height: 4vh;
+  border: none;
+  outline: none;
+  background-color: var(--white-font-color);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  text-indent: 3rem;
+  padding: 0.5rem;
+  color: var(--content-font-color);
+}
+.copy-btn{
+  width: 5vw;
+  height: 4vh;
+  outline: none;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: var(--button-bg-color);
+  color:var(--white-font-color);
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+.copy-btn:hover{
+  width: 5vw;
+  height: 4vh;
+  outline: none;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color:rgba(145, 142, 244,0.9);
+  color:var(--white-font-color);
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
 }
 

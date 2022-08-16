@@ -2,8 +2,9 @@ import React from 'react'
 
 const ResultLink = () => {
   return (
-    <div>
-      
+    <div className='shorted-container'>
+      <div className="shorted-link"></div>
+      <button className='copy-btn'>Copy</button>
     </div>
   )
 }
