@@ -15,17 +15,21 @@ const initialState = {
 const ResultLink = (props) => {
   const [shorted, setShorted] = useState("");
   const fetcher = async (state) => {
+    console.log('this entered')
     try {
-      const response = await axios.get(
+      console.log(state.inputlink)
+      const response = await axios(
         `https://api.shrtco.de/v2/shorten?url=${state.inputlink}`
       );
-      const shorted = response.data.result.full_short_link;
-      state.shortenLink = `${shorted}`;
-      setShorted(shorted);
+      const shortLink = response.data.result.full_short_link;
+      console.log(shortLink)
+      state.shortenLink = `${shortLink}`;
+      setShorted(shortLink);
+      console.log(shorted)
       // return state;
       return {
         inputlink: "",
-        shortenLink: `${shorted}`,
+        shortenLink: `${shortLink}`,
         copied: false,
         loading: false,
         error: false,
@@ -42,7 +46,8 @@ const ResultLink = (props) => {
   //use Effect to call dispatch function
   useEffect(() => {
     if (props.link.length) {
-      state.inputlink = `${props.link}`;
+      console.log('dispatch calling')
+      state.inputlink = props.link;
       dispatch(state);
     }
   }, [props.link]);
@@ -72,7 +77,7 @@ const ResultLink = (props) => {
               state.copied = true;
             }}
           >
-            <button className={state.copied ? "copied" : "copy-btn"} onClick={()=>state.copied = true}>
+            <button className={state.copied ? "copied" : "copy-btn"}>
               Copy
             </button>
           </CopyToClipboard>

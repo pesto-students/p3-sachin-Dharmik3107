@@ -232,7 +232,7 @@
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   text-indent: 3rem;
-  padding: 0.2rem;
+  padding: 0.4rem;
   color: var(--background-color);
 }
 .loading{
