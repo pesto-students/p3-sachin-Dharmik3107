@@ -10,6 +10,7 @@
   --content-font-color: #306BAC;
   --content-div-color: #6F9CEB;
   --button-bg-color: #918EF4;
+  --copieed-btn-color: lightgray;
 }
 /* Universal Properties */
 *{
@@ -231,6 +232,30 @@
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   text-indent: 3rem;
+  padding: 0.2rem;
+  color: var(--background-color);
+}
+.loading{
+  width: 50vw;
+  height: 4vh;
+  border: none;
+  outline: none;
+  background-color: var(--white-font-color);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  text-indent: 3rem;
+  padding: 0.5rem;
+  color: var(--content-font-color);
+}
+.noData{
+  width: 50vw;
+  height: 4vh;
+  border: none;
+  outline: none;
+  background-color: var(--white-font-color);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  text-indent: 3rem;
   padding: 0.5rem;
   color: var(--content-font-color);
 }
@@ -260,4 +285,19 @@
   letter-spacing: 0.1rem;
   font-weight: 600;
 }
+.copied{
+  
+  width: 5vw;
+  height: 4vh;
+  outline: none;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: var(--white-btn-hover);
+  color:var(--white-font-color);
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+
 
