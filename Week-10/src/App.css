@@ -59,8 +59,10 @@
   height: 5vh;
   justify-content: space-evenly;
 }
-.btn-container li{
+.btn-hover{
   list-style: none;
+  text-decoration: none;
+  color: var(--white-font-color);
 }
 .btn-hover:hover{
   cursor: pointer;
@@ -297,6 +299,11 @@
   font-size: 0.8rem;
   letter-spacing: 0.1rem;
   font-weight: 600;
+}
+.contact-us{
+  position: absolute;
+  top: 75vh;
+  left: 40vw;
 }
 
 
