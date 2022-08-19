@@ -1,3 +1,4 @@
+//TODO:Footer UI Component
 import React from 'react'
 
 const Footer = () => {

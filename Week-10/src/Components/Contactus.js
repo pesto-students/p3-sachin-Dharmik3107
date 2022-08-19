@@ -1,3 +1,5 @@
+//TODO: Contact page app with contact info and social icons
+//!used Social-icons library for icons
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 const Contactus = () => {

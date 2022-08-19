@@ -1,3 +1,7 @@
+//TODO: Input form and Result of shorted link's logic is created here with conditional rendering
+//!total 4 states:value,input,shorted,copied
+//?axios api with get method called to fetch the API
+//*Copy to clipboard library used to copy shorted links
 import React, { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import axios from "axios";
