@@ -97,7 +97,7 @@
 }
 .inputForm {
   position: absolute;
-  top: 75vh;
+  top: 70vh;
   left: 20vw;
   width: 60vw;
   height: 10vh;
@@ -215,7 +215,7 @@
 /* Styling ResultLink Component */
 .shorted-container {
   position: absolute;
-  top: 90vh;
+  top: 85vh;
   left: 20vw;
   width: 60vw;
   height: 10vh;
@@ -302,9 +302,9 @@
 }
 .contact-container {
   position: absolute;
-  top: 75vh;
+  top: 65vh;
   left: 40vw;
-  background-color: var(--content-font-color);
+  background-color: var(--background-color);
   height: 30vh;
   width: 20vw;
   color: var(--white-font-color);
@@ -333,4 +333,17 @@
   border-radius: 50%;
   background-color: black;
   box-shadow: 1px 1px 10px black;
+}
+.footer{
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  background-color: var(--background-color);
+  width: 99.1vw;
+  height: 5vh;
+  color: var(--white-font-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
