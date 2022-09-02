@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import AddStep from './Components/AddStep';
+import ResetSteps from './Components/ResetSteps';
+import {connect} from 'react-redux';
+import {addStep,resetStep} from './store/Actions/action';
+import { bindActionCreators } from 'redux'
 
-function App() {
+const mapStateToProps = state => {
+  return {
+    count : state.stepReducer.count
+  }
+}
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators({
+    addStep,
+    resetStep
+  },dispatch)
+}
+
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='step-counter App'>
+      <span className='steps'>STEPS : {props.count}</span>
+      <AddStep dispatch={props.addStep}/>
+      <ResetSteps dispatch={props.resetStep}/>
     </div>
   );
 }
 
-export default App;
+export default connect(mapStateToProps,mapDispatchToProps)(App);
