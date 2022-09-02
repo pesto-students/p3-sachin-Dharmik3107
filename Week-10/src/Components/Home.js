@@ -7,21 +7,20 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import axios from "axios";
 
 const Home = () => {
-  const [value, setValue] = useState("");
-  const [input, setInput] = useState("");
+  const [getValue, setGetValue] = useState(""); 
+  const [inputLink, setInputLink] = useState("");
   const [shorted, setShorted] = useState("");
   const [copied, setCopied] = useState(false);
   const handleShorten = () => {
-    console.log(value);
-    setInput(value);
-    console.log(input);
-    setValue("");
+    setInputLink(getValue);
+    setGetValue("");
   };
-  if (input.length >= 1) {
-    console.log("api calling", input);
+  if (inputLink.length >= 1) {
+    console.log("api calling", inputLink);
     axios
-      .get(`https://api.shrtco.de/v2/shorten?url=${input}`)
-      .then((response) => setShorted(response.data.result.full_short_link))
+      .get(`https://api.shrtco.de/v2/shorten?url=${inputLink}`)
+      .then((response) => {setShorted(response.data.result.full_short_link)
+      console.log(response)})
       .catch((err) => console.log(err.message));
     console.log(shorted);
   }
@@ -39,9 +38,9 @@ const Home = () => {
       <div className="inputForm">
         <input
           type="text"
-          value={value}
+          value={getValue}
           placeholder="Paste link here to short it..."
-          onChange={(event) => setValue(event.target.value)}
+          onChange={(event) => setGetValue(event.target.value)}
         />
         <button onClick={handleShorten}>Shorten</button>
       </div>
