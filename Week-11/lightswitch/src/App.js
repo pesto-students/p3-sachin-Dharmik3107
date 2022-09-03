@@ -7,7 +7,7 @@ const App = () => {
   const myState = useSelector(state=>state.reducer);
   const dispatch = useDispatch();
   return (
-    <div className={myState ? 'dark' : 'lit'}>
+    <div className={myState ? 'dark' : 'light'}>
       <button onClick={()=>dispatch(changeLight(!myState))}>enable DarkMode</button>
     </div>
   )

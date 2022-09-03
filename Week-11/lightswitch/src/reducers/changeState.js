@@ -1,6 +1,10 @@
+const actions = {
+    change:'CHANGE_THEME'
+}
+
 const changeState = (state=false,action) => {
     switch(action.type){
-        case 'change': return state = action.payload;
+        case actions.change: return state = action.payload;
         default: return state;
     }
 }

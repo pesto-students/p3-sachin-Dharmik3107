@@ -1,5 +1,5 @@
-export const changeLight = (value) => {
+export const changeLight = (booleanValue) => {
   return (dispatch) => {
-    dispatch({ type: "change", payload: value });
+    dispatch({ type: "CHANGE_THEME", payload: booleanValue });
   };
 };
