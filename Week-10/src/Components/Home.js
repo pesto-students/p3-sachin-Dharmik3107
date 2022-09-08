@@ -1,39 +1,41 @@
-//TODO: Input form and Result of shorted link's logic is created here with conditional rendering
-//!total 4 states:value,input,shorted,copied
+//TODO: Input form and Result of shortedLink link's logic is created here with conditional rendering
+//!total 4 states:value,input,shortedLink,copiedText
 //?axios api with get method called to fetch the API
-//*Copy to clipboard library used to copy shorted links
+//*Copy to clipboard library used to copy shortedLink links
 import React, { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import axios from "axios";
 
 const Home = () => {
-  const [value, setValue] = useState("");
-  const [input, setInput] = useState("");
-  const [shorted, setShorted] = useState("");
-  const [copied, setCopied] = useState(false);
+  const [value, setValue] = useState(""); 
+  const [inputLink, setInputLink] = useState("");
+  const [shortedLink, setShortedLink] = useState("");
+  const [copiedText, setCopiedText] = useState(false);
+  
   const handleShorten = () => {
-    console.log(value);
-    setInput(value);
-    console.log(input);
+    setInputLink(value);
     setValue("");
   };
-  if (input.length >= 1) {
-    console.log("api calling", input);
+
+  if (inputLink.length >= 1) {
     axios
-      .get(`https://api.shrtco.de/v2/shorten?url=${input}`)
-      .then((response) => setShorted(response.data.result.full_short_link))
+      .get(`https://api.shrtco.de/v2/shorten?url=${inputLink}`)
+      .then((response) => {setShortedLink(response.data.result.full_short_link)
+      console.log(response)})
       .catch((err) => console.log(err.message));
-    console.log(shorted);
   }
+
   const handleCopy = () => {
-    setCopied(true);
+    setCopiedText(true);
   };
-  if (copied) {
+
+  if (copiedText) {
     setTimeout(() => {
-      setCopied(false);
+      setCopiedText(false);
       document.getElementById("disabled").disabled = true;
     }, 1000);
   }
+
   return (
     <>
       <div className="inputForm">
@@ -45,11 +47,11 @@ const Home = () => {
         />
         <button onClick={handleShorten}>Shorten</button>
       </div>
-      {shorted && (
-        <div className="shorted-container">
-          <div className="shorted-link">{shorted}</div>
-          <CopyToClipboard text={shorted} onCopy={handleCopy}>
-            <button id="disabled" className={copied ? "copied" : "copy-btn"}>
+      {shortedLink && (
+        <div className="shortedLink-container">
+          <div className="shortedLink-link">{shortedLink}</div>
+          <CopyToClipboard text={shortedLink} onCopy={handleCopy}>
+            <button id="disabled" className={copiedText ? "copiedText" : "copy-btn"}>
               Copy
             </button>
           </CopyToClipboard>
