@@ -1,3 +1,6 @@
+//TODO: Create controller file to perform weather data application
+//* Functions : Weather information function, Forecast information function, Present time information, function to filter all information
+
 // importing axious for API calls
 const axios = require('axios');
 // importing json data file
@@ -26,7 +29,7 @@ const WeatherInfo = (req, res) => {
         //if no search then return false
         return res.json({
             status: false,
-            message: "Page and limit must be required"
+            message: "Page and limit is required"
         });
     }
 }
@@ -39,10 +42,11 @@ const ForecastInfo = async (req, res) => {
     //if city is there then filter by id
     if (city) {
         const searchResult = cities.filter(item => (item?.city?.findname).toLowerCase() === city.toLowerCase());
-
+        //code to be run if search result is not null or empty
         if (searchResult !== []) {
 
             let lat = searchResult[0]?.city?.coord?.lat, lon = searchResult[0]?.city?.coord?.lon;
+            //awaiting for api calling process to be completed and using then method performing return json file
             await axios.post(`api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=e08982f98124c820213f2063b78301de`).then((data) => {
                 return res.json({
                     status: true,
@@ -58,7 +62,7 @@ const ForecastInfo = async (req, res) => {
         } else {
             return res.json({
                 status: false,
-                message: "City is not exist"
+                message: "This city does not exist in list"
             })
         }
 
@@ -66,14 +70,14 @@ const ForecastInfo = async (req, res) => {
     } else {
         return res.json({
             status: false,
-            message: "City must be required"
+            message: "City name is required"
         })
     }
 
 }
-
+//async function to get present time information
 const currentInfo = async (req, res) => {
-
+    //Same search logic as above function
     const { city } = req.body;
 
     if (city) {
@@ -82,10 +86,11 @@ const currentInfo = async (req, res) => {
         if (searchResult !== []) {
             let lat = searchResult[0]?.city?.coord?.lat, lon = searchResult[0]?.city?.coord?.lon;
 
-            await axios.post(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=266c95e6d3b9a39cab24a23a31f06bc8`).then((data) => {
+            await axios.post(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=e08982f98124c820213f2063b78301de`).then((data) => {
 
                 return res.json({
                     status: true,
+                    //Returning particular present time data
                     data: data?.data
                 })
             }).catch((error) => {
@@ -104,52 +109,56 @@ const currentInfo = async (req, res) => {
     } else {
         return res.json({
             status: false,
-            message: "City must be required"
+            message: "City is required"
         })
     }
 
 }
-
+//function to filter all the information collected
 const filterInfo = (req, res) => {
 
     const { search } = req.body;
-
+    //if search is there then performing certain conditions and filtering data according to it
     if (search) {
-        const searchData = (searchCase) => {
+        const getData = (searchCase) => {
+            //auxiliary space to store filtered data
             const result = [];
             let search = searchCase.toLowerCase();
             for (let i = 0; i < cities.length; i++) {
 
                 for (const prop in cities[i]) {
-
+                    //if property is not equal to time then get data using index of search 
                     if (prop != 'time') {
-                        let condtion = prop == 'weather' ? cities[i][prop][0] : cities[i][prop];
+                        let condition = prop == 'weather' ? cities[i][prop][0] : cities[i][prop];
 
-                        for (let l in condtion) {
-
-                            if (condtion[l].toString().toLowerCase().indexOf(search) != -1) result.push(cities[i]);
+                        for (let l in condition) {
+                            //if search is matched then push it to auxiliary space otherwise use the coordinates in condition
+                            if (condition[l].toString().toLowerCase().indexOf(search) != -1) result.push(cities[i]);
                             if (l == "coord") {
-                                for (let j in condtion[l]) {
-
-                                    if (condtion[l][j].toString().toLowerCase().indexOf(search) != -1) result.push(cities[i]);
+                                for (let j in condition[l]) {
+                                    if (condition[l][j].toString().toLowerCase().indexOf(search) != -1) result.push(cities[i]);
                                 }
                             }
                         }
                     }
                 }
-
             }
-            const unique = result.filter(ele => {
-                const isDuplicate = result.includes(ele.city.name);
+            //filtering data collected in auxiliary space
+            const unique = result.filter(element => {
+                //check if result include the city name searched for
+                const isDuplicate = result.includes(element.city.name);
+                //if isDuplicate is false then add data to auxilliary space
                 if (!isDuplicate) {
-                    result.push(ele.city.name); return true;
-                } return false;
+                    result.push(element.city.name); 
+                    return true;
+                } 
+                return false;
             })
 
             return unique
         }
-
-        const data = searchData(search);
+        //calling getData function and performing search and filter 
+        const data = getData(search);
         return res.json({
             status: true,
             data: data
