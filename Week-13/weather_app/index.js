@@ -1,10 +1,10 @@
 //Express router for response to client request
-import express from 'express';
+const express = require('express');
 //body parser to process data in middleware for parsing json
 const bodyParser = require('body-parser')
 const Routes = require('./source/Routes/route.js');
 //port for server
-const port = 8000;
+const port = 3000;
 
 const app = express();
 // mounting body parser with app(express)

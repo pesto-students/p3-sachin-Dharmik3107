@@ -1,5 +1,5 @@
 //using express router functionality for endpoint response to client request
-import express from 'express';
+const express = require('express');
 const router = express.Router();
 //importing all the function created in controller file
 const { WeatherInfo, ForecastInfo, currentInfo, filterInfo } = require('../Controller/controller');
