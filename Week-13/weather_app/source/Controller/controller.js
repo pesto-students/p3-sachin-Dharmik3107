@@ -2,9 +2,9 @@
 //* Functions : Weather information function, Forecast information function, Present time information, function to filter all information
 
 // importing axious for API calls
-const axios = require('axios');
+import axios from 'axios';
 // importing json data file
-const cities = require('./weather_16.json');
+const cities = require('./weather_app.json');
 
 // fucntion to get data of particular city
 const WeatherInfo = (req, res) => {

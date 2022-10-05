@@ -1,10 +1,8 @@
-#!/usr/bin/env node
-
 //Express router for response to client request
-const express = require('express');
+import express from 'express';
 //body parser to process data in middleware for parsing json
 const bodyParser = require('body-parser')
-const Routes = require('./Routes/route');
+const Routes = require('./source/Routes/route.js');
 //port for server
 const port = 8000;
 
