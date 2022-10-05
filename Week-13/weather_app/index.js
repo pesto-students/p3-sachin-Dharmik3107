@@ -4,7 +4,7 @@
 const express = require('express');
 //body parser to process data in middleware for parsing json
 const bodyParser = require('body-parser')
-const Routes = require('./Routes/routes');
+const Routes = require('./Routes/route');
 //port for server
 const port = 8000;
 
