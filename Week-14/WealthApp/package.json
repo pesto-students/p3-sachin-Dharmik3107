@@ -1,0 +1,16 @@
+{
+  "name": "wealthapp",
+  "version": "1.0.0",
+  "description": "Wealth Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "Dharmik Abhangi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^4.10.0",
+    "mongoose": "^6.6.5"
+  }
+}
