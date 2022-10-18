@@ -1,8 +1,8 @@
 const jwt = require("jsonwebtoken");
 
 //Generating token 
-const generateToken = (_id, emailId, firstName, age) => {
-  return jwt.sign({ _id, emailId, firstName, age }, process.env.SECRET_KEY);
+const generateToken = (_id, emailId, userName, age) => {
+  return jwt.sign({ _id, emailId, userName, age }, process.env.SECRET_KEY);
 };
 
 //Verifying user by token
@@ -16,7 +16,7 @@ const verifyUser = async (req, res, next) => {
         if (decoded) {
           (req._id = decoded._id),
             (req.emailId = decoded.emailId),
-            (req.firstName = decoded.firstName),
+            (req.userName = decoded.userName),
             (req.age = decoded.age),
             next();
         } else if (error) {

@@ -15,6 +15,7 @@ const ageValidator = (birthdate) => {
 const userSchema = mongoose.Schema({
   firstName: { type: String, required: true, maxLength: 100, trim: true },
   lastName: { type: String, required: true, maxLength: 100, trim: true },
+  userName:{type:String,required:true,unique:true,lowercase:true},
   birthDate: {
     type: Date,
     required: true,
@@ -54,4 +55,6 @@ userSchema.methods.validatePassword = async (password) => {
   return await bcrypt.compare(password, this.password);
 };
 
-module.exports = mongoose.model("user", userSchema);
+const userModel = mongoose.model("user", userSchema);
+
+module.exports = userModel;
