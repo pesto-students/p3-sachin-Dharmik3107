@@ -25,7 +25,7 @@ const userSchema = mongoose.Schema({
   age: { type: Number },
   gender: { type: String, enum: ["male", "female", "others"], default: "user" },
   isDeleted: { type: Boolean, default: false },
-},{strict:true});
+});
 
 // userSchema.pre("save", async () => {
 //   const user = this;
