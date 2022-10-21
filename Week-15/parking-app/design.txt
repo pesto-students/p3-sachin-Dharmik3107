@@ -1,0 +1,7 @@
+Environment Setup:
+1 parking, 1 entrance, 1 exit, 6 parking slot
+
+Parking Design:
+Entrance-->{1},{2},{3},{4},{5},{6}-->Exit
+
+> Nearest will be 1 and farest will be 6.
