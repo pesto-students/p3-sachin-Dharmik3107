@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const entranceSchema = mongoose.Schema({
     ticket_no:{
-        type:Number,
+        type:String,
         require:true
     },
     ticket_id:{
