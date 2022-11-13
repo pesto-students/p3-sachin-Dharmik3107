@@ -21,4 +21,4 @@
 ## Screenshots
 
 1.High Level Diagram
-![HLD](https://user-images.githubusercontent.com/49364985/201501569-bb8dc047-bced-45d8-9381-e6351794a192.jpg)
+![HLD](https://user-images.githubusercontent.com/49364985/201501612-50b10b01-f723-4406-afe3-4c282fb4c720.jpg)
