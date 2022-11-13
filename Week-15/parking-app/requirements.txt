@@ -1,0 +1,4 @@
+1. No. of Entrances: 1
+2. Types of Spot: Car Slots
+3. Payment Strategy: Hourly based charge(Not added in this Project)
+4. Nearest Parking Spot

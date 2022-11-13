@@ -1,0 +1,14 @@
+1. Vehicle
+    1.1-> Vehicle No
+    1.2-> Vehicle Color
+2. Ticket
+    2.1->Ticket No
+    2.2->Vehicle No 
+    2.3->Vehicle Color
+    2.4->Parking Slot No.
+3. Entrace Gate
+    3.1->Ticket generation based on parking slot availibility
+4. Parking Slot
+    4.1->Parking Slot No.
+5. Exit Gate
+    5.1->update entrance about parking slot no of leaving car
