@@ -77,7 +77,7 @@
 .information {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   margin: 4rem;
   width: 40vw;
 }

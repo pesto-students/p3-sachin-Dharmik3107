@@ -7,12 +7,13 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserTracing } from "@sentry/tracing";
 
 Sentry.init({
-  dsn: "https://d752de34d26240a1bdfb522b79f367f9@o4504149477687296.ingest.sentry.io/4504149479063552",
+  dsn: "https://3a0736e7580244359e439e6a8965ecce@o4504149477687296.ingest.sentry.io/4504150179708928",
   integrations: [new BrowserTracing()],
-  tracesSampleRate: 0.2,
-  // Set  to 1.0 to capture 100%
+
+  // Set tracesSampleRate to 1.0 to capture 100%
   // of transactions for performance monitoring.
   // We recommend adjusting this value in production
+  tracesSampleRate: 1.0,
 });
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

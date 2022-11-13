@@ -14,6 +14,7 @@ const Home = () => {
   const [shortedLink, setShortedLink] = useState("");
   const [copiedText, setCopiedText] = useState(false);
   
+  //user tracking
   useEffect(()=>{
     ReactGA.pageview(window.location.pathname)
   })
@@ -29,13 +30,8 @@ const Home = () => {
       console.log(response)})
       .catch((err) => console.log(err.message));
   }
-
-  const handleCopy = () => {
-    ReactGA.event({
-      action:'test action',
-      label:'test label',
-      value:true
-    })
+  //interaction tracking
+  const handleCopy = (event) => {
     setCopiedText(true);
   };
 
@@ -53,7 +49,13 @@ const Home = () => {
           type="text"
           value={value}
           placeholder="Paste link here to short it..."
-          onChange={(event) => setValue(event.target.value)}
+          onChange={(event) => {
+            ReactGA.event({
+              category:event.target.value,
+              action:'test action',
+              label:'test label',
+            })
+            setValue(event.target.value)}}
         />
         <button onClick={handleShorten}>Shorten</button>
       </div>

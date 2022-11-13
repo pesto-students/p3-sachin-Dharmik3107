@@ -10,7 +10,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import ReactGA from 'react-ga'
 
-const tracking_id = 'G-PEKY2JB6CK';
+const tracking_id = 'UA-249368906-1';
 ReactGA.initialize(tracking_id);
 
 const App = () => {

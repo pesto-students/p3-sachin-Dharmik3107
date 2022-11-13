@@ -17,9 +17,11 @@ const Header = () => {
           </ul>
         </div>
         <div className="login-btns">
-          <a href="/" className="btn-hover">
+          <button href="/" className="btn-hover" onClick={()=>{
+            throw Error('Error')
+          }}>
             Login/Sign-up
-          </a>
+          </button>
         </div>
       </nav>
       <div className="page-descriptor">
