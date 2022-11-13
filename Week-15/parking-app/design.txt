@@ -1,0 +1,14 @@
+Environment Setup:
+1 parking, 1 entrance, 1 exit, 6 parking slot
+
+Parking Design:
+Entrance-->{1},{2},{3},{4},{5},{6}-->Exit
+
+> Nearest will be 1 and farest will be 6.
+
+<-+->process on Entrance:
+1.Generate ticket no and id
+2.get empty slot from parking collection
+3.allot slot if available then response with no slot available
+    3.1 while aloting, vehicle data, ticket_id and slot no should be updated in vehicle collection
+4.after alloting update parking collection with vehicle no and color.
